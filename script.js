@@ -1,6 +1,10 @@
 var numSquares = 8;
 var colors = [];
 var pickedColor;
+var score = 0;
+var over = false;
+var ceiling = 1;
+var clicks = 0;
 var squares = document.querySelectorAll(".square");
 var colorDisplay = document.getElementById("colorDisplay");
 var body = document.body.style.backgroundColor;
@@ -11,10 +15,6 @@ var h1 = document.querySelector("h1");
 var h2 = document.querySelector("h2");
 var newColor = document.getElementById("newColor");
 var modeButtons = document.querySelectorAll(".mode");
-var score = 0;
-var over = false;
-var ceiling = 1;
-var clicks = 0;
 var highscore = localStorage.getItem("highscore");
 
 init();
