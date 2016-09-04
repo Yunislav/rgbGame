@@ -29,13 +29,10 @@ function init() {
     reset();
 
 }
-
-function hiScore() {
-    if (highscore !== null) {
-        if (score > highscore) {
-            localStorage.setItem("highscore", score);
-        }
-    } else {
+//There're two main possibilities when we open a page: 
+//either this is the first time I play (then highscore is null)
+function hiScore() { 
+  if (highscore === null || score > highscore) {
         localStorage.setItem("highscore", score);
     }
 }
