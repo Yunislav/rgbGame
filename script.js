@@ -29,8 +29,8 @@ function init() {
     reset();
 
 }
-//There're two main possibilities when we open a page: 
-//either this is the first time I play (then highscore is null)
+//either this is the first time I play (then highscore is null), 
+//or we have played before in this browser and highscore is already a number.
 function hiScore() { 
   if (highscore === null || score > highscore) {
         localStorage.setItem("highscore", score);
@@ -84,7 +84,6 @@ function setupSquares() {
             } else if (clicks % 3 == 0) { // FALSE
                 falseGuess();
             } else { // SQUAE FADE
-                // falseGuess();
                 message.textContent = "Try Again";
                 this.style.background = "#232323";
             }
